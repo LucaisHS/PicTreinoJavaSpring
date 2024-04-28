@@ -2,10 +2,7 @@ package com.picSimplificado.picSimplificado.domain.transaction;
 
 import com.picSimplificado.picSimplificado.domain.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -15,6 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of="id")
 public class Transaction {
     @Id
@@ -29,5 +27,4 @@ public class Transaction {
     private User receiver;
     private LocalDateTime timestamp;
 
-    public Transaction() {}
 }
